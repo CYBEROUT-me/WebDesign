@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>П’ять вертикальних рядків</title>
+   <meta name="Description" content="Вертикальні рядки, що біжать">
+   <meta name="Keywords" content="HTML, marquee, рядок, вертикальний рух">
+</head>
+<body>
+
+<!-- 1. Коливання -->
+<marquee width="100%" bgcolor="#FFCCCC" height="80" behavior="alternate" direction="up">
+   <font color="#000080" face="Arial" size="4"><b>Текст коливається вгору-вниз</b></font>
+</marquee>
+
+<!-- 2. Знизу догори (scroll) -->
+<marquee width="100%" bgcolor="#CCFFCC" height="80" behavior="scroll" direction="up">
+   <img src="image/pic1.jpg" width="100" height="80" alt="Картинка 1">
+   <img src="image/pic2.jpeg" width="100" height="80" alt="Картинка 2">
+   <img src="image/pic3.jpeg" width="100" height="80" alt="Картинка 3">
+</marquee>
+
+<!-- 3. Згори донизу (slide) -->
+<marquee width="100%" bgcolor="#CCCCFF" height="80" behavior="slide" direction="down">
+   <img src="image/pic4.jpeg" width="100" height="80" alt="Картинка 4">
+</marquee>
+
+<!-- 4. Запізнення 1 -->
+<marquee width="100%" bgcolor="#FFFFCC" height="80" behavior="scroll" direction="down" scrolldelay="150">
+   <font color="#8B0000" face="Georgia" size="4">Вертикальний текст із запізненням (150 мс)</font>
+</marquee>
+
+<!-- 5. Запізнення 2 -->
+<marquee width="100%" bgcolor="#E6E6FA" height="80" behavior="scroll" direction="down" scrolldelay="300">
+   <font color="#00008B" face="Courier New" size="4">Вертикальний текст із більшим запізненням (300 мс)</font>
+</marquee>
+
+<p align="right"><i>Студент групи 301-ТН Юхно О.В.</i></p>
+</body>
+</html>

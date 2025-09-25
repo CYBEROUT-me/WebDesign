@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>П’ять горизонтальних рядків</title>
+   <meta name="Description" content="Горизонтальні рядки, що біжать">
+   <meta name="Keywords" content="HTML, marquee, рядок, анімація">
+</head>
+<body>
+
+<!-- 1. Коливання -->
+<marquee width="100%" bgcolor="#FFCCCC" height="50" behavior="alternate">
+   <font color="#000080" face="Arial" size="4"><b>Текст у рядку коливається з боку в бік</b></font>
+</marquee>
+
+<!-- 2. Справа наліво (scroll) -->
+<marquee width="100%" bgcolor="#CCFFCC" height="50" behavior="scroll" direction="left">
+   <font color="#800000" face="Tahoma" size="4">Текст пробігає справа наліво та з’являється знову</font>
+</marquee>
+
+<!-- 3. Зліва направо (slide) -->
+<marquee width="100%" bgcolor="#CCCCFF" height="50" behavior="slide" direction="right">
+   <font color="#006400" face="Verdana" size="4"><i>Текст у рядку пробігає зліва направо та зупиняється</i></font>
+</marquee>
+
+<!-- 4. Запізнення 1 -->
+<marquee width="100%" bgcolor="#FFFFCC" height="50" behavior="scroll" direction="left" scrolldelay="200">
+   <font color="#8B0000" face="Georgia" size="4">Рядок із запізненням (200 мс)</font>
+</marquee>
+
+<!-- 5. Запізнення 2 -->
+<marquee width="100%" bgcolor="#E6E6FA" height="50" behavior="scroll" direction="left" scrolldelay="400">
+   <font color="#00008B" face="Courier New" size="4">Рядок із більшим запізненням (400 мс)</font>
+</marquee>
+
+<p align="right"><i>Студент групи 301-ТН Юхно О.В.</i></p>
+</body>
+</html>
