@@ -1,0 +1,48 @@
+<html>
+<head>
+<TITLE>Використання сенсорних зображень</TITLE>
+<meta charset=UTF-8>
+</head>
+<body bgcolor="#F0F8FF">
+<h1 align="center">Картируванне зображення</h1>
+<p align="center">Натисніть на зображення, щоб перейти до розкладу</p>
+
+<!-- Створюємо карту -->
+<map name="map1">
+<area shape="rect" coords="0,0,600,400" href="YukhnoLab05-1.htm" title="Перейти до розкладу занять" alt="Розклад">
+</map>
+
+<!-- Застосовуємо її до малюнку -->
+<center>
+<!-- SVG зображення як заглушка -->
+<svg width="600" height="400" style="border: 2px solid #333;">
+<defs>
+<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#4682B4;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" />
+</linearGradient>
+</defs>
+<rect width="600" height="400" fill="url(#grad1)"/>
+<text x="300" y="180" font-size="40" fill="white" text-anchor="middle" font-weight="bold">РОЗКЛАД ЗАНЯТЬ</text>
+<text x="300" y="220" font-size="24" fill="white" text-anchor="middle">Група 301-ТН</text>
+<text x="300" y="260" font-size="18" fill="white" text-anchor="middle">Натисніть для переходу</text>
+<circle cx="300" cy="320" r="40" fill="white" opacity="0.8"/>
+<text x="300" y="330" font-size="30" text-anchor="middle">📅</text>
+</svg>
+<!-- Додаємо usemap для зв'язку з картою -->
+<map name="map1">
+<area shape="rect" coords="0,0,600,400" href="YukhnoLab05-1.htm" title="Перейти до розкладу занять">
+</map>
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNDY4MkI0O3N0b3Atb3BhY2l0eToxIiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6Ijg3Q0VFQjtzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNncmFkMSkiLz48dGV4dCB4PSIzMDAiIHk9IjE4MCIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj7QoNCe0JfQmtCb0JDQlCDQl9CQ0J3Qr9Ci0Yw8L3RleHQ+PHRleHQgeD0iMzAwIiB5PSIyMjAiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7Qk9GA0YPQv9CwIDMwMS3QotCdPC90ZXh0Pjx0ZXh0IHg9IjMwMCIgeT0iMjYwIiBmb250LXNpemU9IjE4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+0J3QsNGC0LjRgdC90ZbRgtGMINC00LvRjyDQv9C10YDQtdGF0L7QtNGDPC90ZXh0PjxjaXJjbGUgY3g9IjMwMCIgY3k9IjMyMCIgcj0iNDAiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjgiLz48dGV4dCB4PSIzMDAiIHk9IjMzMCIgZm9udC1zaXplPSIzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+ThTwvdGV4dD48L3N2Zz4=" 
+     width="600" height="400" border="2" usemap="#map1" alt="Розклад занять">
+</center>
+
+<br>
+<p align="center">
+<font color="#666666" size="3">
+<i>Клікніть на зображення для переходу до повного розкладу занять групи 301-ТН</i>
+</font>
+</p>
+
+</body>
+</html>

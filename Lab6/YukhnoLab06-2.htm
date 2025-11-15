@@ -1,0 +1,54 @@
+<html>
+<head>
+<TITLE>Карта зі спливаючими заголовками</TITLE>
+<meta charset=UTF-8>
+</head>
+<body bgcolor="#E6F3FF">
+<h1 align="center">Інтерактивне зображення з підказками</h1>
+<p align="center">Наведіть курсор на різні області зображення</p>
+
+<center>
+<!-- Створюємо SVG зображення водоспаду -->
+<svg width="300" height="260" style="border: 1px solid #333;" id="landscape">
+<!-- Небо -->
+<rect x="0" y="0" width="300" height="50" fill="#87CEEB"/>
+<!-- Скеля ліворуч -->
+<polygon points="0,20 50,20 30,140 0,120" fill="#8B7355"/>
+<!-- Вода -->
+<rect x="0" y="180" width="300" height="80" fill="#4682B4"/>
+<!-- Човен -->
+<polygon points="120,180 210,180 150,150" fill="#8B4513"/>
+<!-- Камінь -->
+<circle cx="50" cy="235" r="25" fill="#696969"/>
+<!-- Водоспад -->
+<rect x="100" y="50" width="40" height="130" fill="#B0E0E6"/>
+</svg>
+
+<!--Створюємо карту із спливаючими заголовками-->
+<map name="map2">
+<area shape="rect" coords="0,0,300,50" href="#" title="Блакитне небо">
+<area shape="POLY" coords="120,180,210,180,150,150" href="#" title="Човен">
+<area shape="POLY" coords="0,20,50,20,30,140,0,120" href="#" title="Скеля">
+<area shape="CIRCLE" coords="50,235,25" href="#" title="Камінь">
+</map>
+
+<!--Застосовуємо її до малюнку -->
+<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjI2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjODdDRUVCIi8+PHBvbHlnb24gcG9pbnRzPSIwLDIwIDUwLDIwIDMwLDE0MCAwLDEyMCIgZmlsbD0iIzhCNzM1NSIvPjxyZWN0IHg9IjAiIHk9IjE4MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzQ2ODJCNCIvPjxwb2x5Z29uIHBvaW50cz0iMTIwLDE4MCAyMTAsMTgwIDE1MCwxNTAiIGZpbGw9IiM4QjQ1MTMiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjIzNSIgcj0iMjUiIGZpbGw9IiM2OTY5NjkiLz48cmVjdCB4PSIxMDAiIHk9IjUwIiB3aWR0aD0iNDAiIGhlaWdodD0iMTMwIiBmaWxsPSIjQjBFMEU2Ii8+PC9zdmc+"
+     width="300" height="260" border="1" usemap="#map2" alt="Пейзаж з водоспадом">
+</center>
+
+<br>
+<p align="center">
+<font color="#0066CC" size="3">
+<b>Інтерактивні області:</b><br>
+<font size="2">
+🌤️ Небо (прямокутник)<br>
+⛵ Човен (трикутник)<br>
+⛰️ Скеля (багатокутник)<br>
+⚫ Камінь (коло)
+</font>
+</font>
+</p>
+
+</body>
+</html>

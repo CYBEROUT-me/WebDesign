@@ -1,0 +1,155 @@
+<html>
+<head>
+<TITLE>Навігація геометричними фігурами</TITLE>
+<meta charset=UTF-8>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+.main-container {
+    display: table;
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+}
+.left-panel {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 3px solid #34495E;
+}
+.right-panel {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 3px solid #2196F3;
+    border-left: none;
+}
+.info-box {
+    background-color: #E8F5E9;
+    border-left: 4px solid #4CAF50;
+    padding: 15px;
+    margin: 10px 0;
+}
+.shape-info {
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<h1 align="center" style="color: #2C3E50;">Геометрична навігація</h1>
+
+<p align="center">
+<font size="4" color="#7F8C8D">
+<i>Натисніть на різні геометричні фігури для навігації</i>
+</font>
+</p>
+
+<div class="main-container">
+<!-- Ліва панель з зображенням -->
+<div class="left-panel">
+
+<!-- Створюємо карту з усіма фігурами -->
+<map name="geometry_map">
+<!-- Прямокутник - Розклад -->
+<area shape="rect" coords="50,50,250,170" href="YukhnoLab05-1.htm" title="Перейти до розкладу занять">
+
+<!-- Коло - Гіперпосилання -->
+<area shape="circle" coords="450,110,80" href="YukhnoLab05-3.htm" title="Мої корисні посилання">
+
+<!-- Трикутник - Батьківщина -->
+<area shape="poly" coords="150,230,50,370,250,370" href="YukhnoLab06-3.htm" title="Про мою Батьківщину - Україну">
+
+<!-- П'ятикутник - Головна -->
+<area shape="poly" coords="450,230,550,280,520,380,380,380,350,280" href="YukhnoLab01-9.htm" title="Повернутися на головну сторінку">
+
+<!-- Шестикутник - Контакти -->
+<area shape="poly" coords="300,50,370,90,370,170,300,210,230,170,230,90" href="mailto:yukhno.oleksandr@example.com" title="Написати мені листа">
+</map>
+
+<!-- Застосовуємо карту до зображення -->
+<img src="data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22600%22%20height%3D%22400%22%20fill%3D%22%23ECF0F1%22%2F%3E%3Crect%20x%3D%2250%22%20y%3D%2250%22%20width%3D%22200%22%20height%3D%22120%22%20fill%3D%22%233498DB%22%20stroke%3D%22%232980B9%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22150%22%20y%3D%22100%22%20font-size%3D%2224%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%20font-weight%3D%22bold%22%3E%D0%A0%D0%9E%D0%97%D0%9A%D0%9B%D0%90%D0%94%3C%2Ftext%3E%3Ctext%20x%3D%22150%22%20y%3D%22130%22%20font-size%3D%2216%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E%F0%9F%93%85%3C%2Ftext%3E%3Ccircle%20cx%3D%22450%22%20cy%3D%22110%22%20r%3D%2280%22%20fill%3D%22%23E74C3C%22%20stroke%3D%22%23C0392B%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22450%22%20y%3D%22105%22%20font-size%3D%2220%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%20font-weight%3D%22bold%22%3E%D0%9C%D0%9E%D0%87%3C%2Ftext%3E%3Ctext%20x%3D%22450%22%20y%3D%22130%22%20font-size%3D%2216%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E%D0%9F%D0%9E%D0%A1%D0%98%D0%9B%D0%90%D0%9D%D0%9D%D0%AF%3C%2Ftext%3E%3Cpolygon%20points%3D%22150%2C230%2050%2C370%20250%2C370%22%20fill%3D%22%232ECC71%22%20stroke%3D%22%2327AE60%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22150%22%20y%3D%22320%22%20font-size%3D%2220%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%20font-weight%3D%22bold%22%3E%D0%91%D0%90%D0%A2%D0%AC%D0%9A%D0%86%D0%92-%3C%2Ftext%3E%3Ctext%20x%3D%22150%22%20y%3D%22345%22%20font-size%3D%2220%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%20font-weight%3D%22bold%22%3E%D0%A9%D0%98%D0%9D%D0%90%3C%2Ftext%3E%3Cpolygon%20points%3D%22450%2C230%20550%2C280%20520%2C380%20380%2C380%20350%2C280%22%20fill%3D%22%239B59B6%22%20stroke%3D%22%238E44AD%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22450%22%20y%3D%22315%22%20font-size%3D%2220%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%20font-weight%3D%22bold%22%3E%D0%93%D0%9E%D0%9B%D0%9E%D0%92%D0%9D%D0%90%3C%2Ftext%3E%3Ctext%20x%3D%22450%22%20y%3D%22340%22%20font-size%3D%2216%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E%F0%9F%8F%A0%3C%2Ftext%3E%3Cpolygon%20points%3D%22300%2C50%20370%2C90%20370%2C170%20300%2C210%20230%2C170%20230%2C90%22%20fill%3D%22%23F39C12%22%20stroke%3D%22%23D68910%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22135%22%20font-size%3D%2218%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%20font-weight%3D%22bold%22%3E%D0%9A%D0%9E%D0%9D%D0%A2%D0%90%D0%9A%D0%A2%D0%98%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22160%22%20font-size%3D%2216%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%3E%F0%9F%93%A7%3C%2Ftext%3E%3C%2Fsvg%3E"
+     width="100%" height="auto" style="max-width: 600px; display: block; margin: 0 auto;" usemap="#geometry_map" alt="Геометрична навігація">
+
+</div>
+
+<!-- Права панель з інформацією -->
+<div class="right-panel">
+<h2 align="center" style="color: #2196F3; margin-top: 0;">📋 Геометрична навігація</h2>
+
+<div class="info-box">
+<p style="margin: 5px 0;"><b>Інструкція:</b> Наведіть курсор миші на геометричні фігури ліворуч та натисніть, щоб перейти до відповідного розділу.</p>
+</div>
+
+<h3 style="color: #34495E; margin-top: 20px;">Доступні розділи:</h3>
+
+<div class="shape-info" style="background-color: #EBF5FB; border-left: 5px solid #3498DB;">
+<p style="margin: 5px 0;"><b style="color: #3498DB; font-size: 16px;">🔲 ПРЯМОКУТНИК</b></p>
+<p style="margin: 5px 0; font-size: 14px;"><b>Назва:</b> Розклад занять<br>
+<b>Колір:</b> Синій<br>
+<b>Файл:</b> YukhnoLab05-1.htm<br>
+<b>Опис:</b> Повний розклад занять групи 301-ТН</p>
+</div>
+
+<div class="shape-info" style="background-color: #FDEDEC; border-left: 5px solid #E74C3C;">
+<p style="margin: 5px 0;"><b style="color: #E74C3C; font-size: 16px;">⭕ КОЛО</b></p>
+<p style="margin: 5px 0; font-size: 14px;"><b>Назва:</b> Мої посилання<br>
+<b>Колір:</b> Червоний<br>
+<b>Файл:</b> YukhnoLab05-3.htm<br>
+<b>Опис:</b> Корисні інтернет-ресурси</p>
+</div>
+
+<div class="shape-info" style="background-color: #EAFAF1; border-left: 5px solid #2ECC71;">
+<p style="margin: 5px 0;"><b style="color: #2ECC71; font-size: 16px;">🔺 ТРИКУТНИК</b></p>
+<p style="margin: 5px 0; font-size: 14px;"><b>Назва:</b> Батьківщина<br>
+<b>Колір:</b> Зелений<br>
+<b>Файл:</b> YukhnoLab06-3.htm<br>
+<b>Опис:</b> Інформація про міста України</p>
+</div>
+
+<div class="shape-info" style="background-color: #F4ECF7; border-left: 5px solid #9B59B6;">
+<p style="margin: 5px 0;"><b style="color: #9B59B6; font-size: 16px;">⬠ П'ЯТИКУТНИК</b></p>
+<p style="margin: 5px 0; font-size: 14px;"><b>Назва:</b> Головна сторінка<br>
+<b>Колір:</b> Фіолетовий<br>
+<b>Файл:</b> YukhnoLab01-9.htm<br>
+<b>Опис:</b> Персональна сторінка</p>
+</div>
+
+<div class="shape-info" style="background-color: #FEF5E7; border-left: 5px solid #F39C12;">
+<p style="margin: 5px 0;"><b style="color: #F39C12; font-size: 16px;">⬡ ШЕСТИКУТНИК</b></p>
+<p style="margin: 5px 0; font-size: 14px;"><b>Назва:</b> Контакти<br>
+<b>Колір:</b> Помаранчевий<br>
+<b>Тип:</b> Email посилання<br>
+<b>Опис:</b> Написати листа</p>
+</div>
+
+<hr style="border: 1px solid #BDC3C7; margin: 20px 0;">
+
+<p align="center" style="margin: 10px 0;">
+<font size="3" color="#7F8C8D">
+<i><b>Всього:</b> 5 геометричних фігур<br>
+<b>Технологія:</b> HTML Image Maps (&lt;map&gt;, &lt;area&gt;)</i>
+</font>
+</p>
+</div>
+</div>
+
+<br>
+<p align="center">
+<font size="2" color="#95A5A6">
+<i>© 2024 Юхно О.В. | Група 301-ТН | Лабораторна робота №6</i>
+</font>
+</p>
+
+</body>
+</html>
