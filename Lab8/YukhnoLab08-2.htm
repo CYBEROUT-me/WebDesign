@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №8 - Завдання 2</title>
+    
+    <style>
+        body {
+            background-color: #ecf0f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 36pt;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+            text-decoration: underline;
+            background-color: #bdc3c7;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #16a085;
+            text-align: left;
+            border-width: thin;
+            border-color: #16a085;
+            padding-left: 15px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            font-size: 14pt;
+            font-family: Georgia, serif;
+            color: #34495e;
+            text-align: justify;
+            text-indent: 40px;
+            line-height: 24pt;
+            background-color: #ffffff;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        div {
+            background-color: #d5f4e6;
+            border-width: medium;
+            border-color: #27ae60;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        div p {
+            background-color: transparent;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .special {
+            font-style: italic;
+            color: #8e44ad;
+            background-color: #f4ecf7;
+            text-transform: capitalize;
+        }
+        
+        .highlight {
+            background-color: #fff9e6;
+            color: #e67e22;
+            font-size: 16pt;
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:visited {
+            color: #9b59b6;
+        }
+        
+        a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Глобальні таблиці стилів CSS</h1>
+    
+    <h2>Переваги використання глобальних стилів</h2>
+    
+    <p>
+        Глобальні таблиці стилів дозволяють визначити єдиний стиль оформлення для всього документу.
+        Замість того, щоб повторювати атрибут style в кожному тезі, ми визначаємо правила один раз
+        у контейнері style, і вони автоматично застосовуються до всіх відповідних елементів сторінки.
+    </p>
+    
+    <p>
+        Це значно спрощує підтримку коду та забезпечує консистентність дизайну. Якщо потрібно змінити
+        стиль всіх параграфів, достатньо змінити одне правило в секції style, а не редагувати кожен
+        параграф окремо. Це економить час та зменшує ймовірність помилок.
+    </p>
+    
+    <div>
+        <h2>Блоковий елемент з вкладеними параграфами</h2>
+        
+        <p>
+            Цей параграф знаходиться всередині блокового елементу div. Він наслідує базові стилі,
+            визначені для всіх параграфів, але також має додаткові стилі, специфічні для параграфів
+            усередині div елементів.
+        </p>
+        
+        <p>
+            Каскадність CSS означає, що стилі можуть накладатися один на одний. Більш специфічні
+            правила (як "div p") мають пріоритет над загальними правилами (як просто "p").
+        </p>
+    </div>
+    
+    <h2>Класи стилів для спеціального оформлення</h2>
+    
+    <p class="special">
+        цей параграф використовує клас "special" і має курсивне накреслення, фіолетовий колір
+        тексту на світло-фіолетовому фоні. кожне слово починається з великої літери.
+    </p>
+    
+    <p>
+        Звичайний параграф після спеціального. Він використовує стандартні стилі, визначені для
+        всіх параграфів документа. Це демонструє, як легко можна чергувати різні стилі оформлення.
+    </p>
+    
+    <p class="highlight">
+        Параграф з класом "highlight" привертає увагу за допомогою підкресленого жирного тексту
+        помаранчевого кольору на світло-жовтому фоні та збільшеного розміру шрифту.
+    </p>
+    
+    <div>
+        <h2>Гіперпосилання та їх стани</h2>
+        
+        <p>
+            У глобальних стилях також визначено оформлення для <a href="#">гіперпосилань</a>.
+            Посилання змінюють свій вигляд залежно від стану: звичайне посилання (синє),
+            <a href="#visited">відвідане посилання</a> (фіолетове), та посилання при наведенні
+            курсора (червоне з підкресленням).
+        </p>
+        
+        <p>
+            Спробуйте навести курсор на <a href="#">це посилання</a>, щоб побачити зміну стилю.
+            Такий підхід покращує користувацький досвід, роблячи інтерфейс більш інтуїтивним.
+        </p>
+    </div>
+    
+    <h2>Висновок</h2>
+    
+    <p>
+        Використання глобальних таблиць стилів є ефективним методом управління зовнішнім виглядом
+        веб-сторінки. Це дозволяє швидко створювати професійно оформлені документи з єдиним стилем,
+        який легко підтримувати та модифікувати.
+    </p>
+    
+    <p class="special">
+        завдяки css ми можемо створювати красиві та функціональні веб-сторінки, які приємно
+        читати та з якими зручно взаємодіяти користувачам.
+    </p>
+    
+</body>
+</html>

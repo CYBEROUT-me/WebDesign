@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивна розмітка - Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+        }
+        
+        .wrapper > * {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 3px;
+        }
+        
+        .header {
+            background-color: #6e7d82;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .main-container {
+            display: flex;
+            flex: 1;
+            margin: 3px;
+            gap: 3px;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            gap: 3px;
+            align-content: flex-start;
+        }
+        
+        .sidebar {
+            flex: 0 0 20%;
+            background-color: #6e7d82;
+            border: 1px solid #ddd;
+            padding: 20px;
+            order: 2;
+        }
+        
+        .box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .box1 {
+            flex: 1 1 calc(33.33% - 6px);
+            background-color: #5bd1d1;
+        }
+        
+        .box2 {
+            flex: 1 1 calc(33.33% - 6px);
+            background-color: #e16b6b;
+        }
+        
+        .box3 {
+            flex: 1 1 calc(33.33% - 6px);
+            background-color: #31a475;
+        }
+        
+        .footer {
+            background-color: #c55a11;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        /* Адаптивність */
+        @media (max-width: 500px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                order: -1;
+                flex: 0 0 auto;
+            }
+            
+            .content {
+                flex-direction: column;
+            }
+            
+            .box {
+                flex: 1 1 100%;
+            }
+        }
+        
+        @media (min-width: 500px) and (max-width: 749px) {
+            .sidebar {
+                flex: 0 0 25%;
+            }
+            
+            .box1, .box2 {
+                flex: 1 1 calc(50% - 6px);
+            }
+            
+            .box3 {
+                flex: 1 1 100%;
+            }
+        }
+        
+        @media (min-width: 750px) and (max-width: 949px) {
+            .sidebar {
+                flex: 0 0 22%;
+            }
+        }
+        
+        @media (min-width: 950px) and (max-width: 1199px) {
+            .sidebar {
+                flex: 0 0 20%;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .wrapper {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            
+            .sidebar {
+                flex: 0 0 18%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            Header (Flexbox Layout)
+        </div>
+        
+        <div class="main-container">
+            <div class="content">
+                <div class="box box1">
+                    <h3>Box 1</h3>
+                    <p>Блакитний блок контенту</p>
+                </div>
+                
+                <div class="box box2">
+                    <h3>Box 2</h3>
+                    <p>Рожевий блок контенту</p>
+                </div>
+                
+                <div class="box box3">
+                    <h3>Box 3</h3>
+                    <p>Зелений блок контенту</p>
+                </div>
+            </div>
+            
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <p>Правий сайдбар</p>
+            </aside>
+        </div>
+        
+        <div class="footer">
+            Footer (Flexbox Layout)
+        </div>
+    </div>
+</body>
+</html>
