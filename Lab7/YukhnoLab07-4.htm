@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7 - Завдання 4</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background: linear-gradient(to right, #232526, #414345);
+            min-height: 100vh;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        h3 {
+            color: #232526;
+            border-bottom: 3px solid #ff6b6b;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        h3:first-of-type {
+            margin-top: 0;
+        }
+        .form-group {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #ff6b6b;
+            outline: none;
+        }
+        select[multiple] {
+            height: 150px;
+        }
+        .radio-group,
+        .checkbox-group {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: block;
+            font-weight: normal;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 15px 40px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+        input[type="submit"] {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+        }
+        input[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+        }
+        input[type="reset"] {
+            background-color: #6c757d;
+            color: white;
+        }
+        input[type="reset"]:hover {
+            background-color: #5a6268;
+        }
+        .required {
+            color: red;
+        }
+        .info-text {
+            color: #666;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .product-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Завдання 4: Форма для замовлення товару</h2>
+    
+    <div class="container">
+        <form action="form_handler.htm" method="post" target="_blank">
+            
+            <h3>💳 Платіжна інформація</h3>
+            
+            <div class="form-group">
+                <label for="bankaccount">Номер банківського рахунку: <span class="required">*</span></label>
+                <input type="text" 
+                       id="bankaccount" 
+                       name="bankaccount" 
+                       required 
+                       placeholder="UA123456789012345678901234567"
+                       maxlength="29"
+                       pattern="[A-Z]{2}[0-9]+"
+                       title="Введіть номер рахунку у форматі IBAN">
+                <p class="info-text">Формат IBAN: UA + 27 цифр</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="userid">Особистий номер користувача: <span class="required">*</span></label>
+                <input type="text" 
+                       id="userid" 
+                       name="userid" 
+                       required 
+                       placeholder="Введіть ваш особистий номер"
+                       maxlength="20">
+            </div>
+            
+            <h3>🛒 Вибір товарів</h3>
+            
+            <div class="form-group">
+                <label for="products">Оберіть товари (можна вибрати кілька): <span class="required">*</span></label>
+                <select id="products" name="products" multiple required size="10">
+                    <optgroup label="Електроніка">
+                        <option value="laptop">Ноутбук HP Pavilion - 25,000 грн</option>
+                        <option value="smartphone">Смартфон Samsung Galaxy - 15,000 грн</option>
+                        <option value="tablet">Планшет iPad Air - 20,000 грн</option>
+                        <option value="headphones">Навушники Sony WH-1000XM4 - 8,000 грн</option>
+                        <option value="smartwatch">Розумний годинник Apple Watch - 12,000 грн</option>
+                    </optgroup>
+                    <optgroup label="Комп'ютерні комплектуючі">
+                        <option value="gpu">Відеокарта NVIDIA RTX 4070 - 30,000 грн</option>
+                        <option value="cpu">Процесор Intel Core i7 - 15,000 грн</option>
+                        <option value="ram">Оперативна пам'ять 32GB - 5,000 грн</option>
+                        <option value="ssd">SSD накопичувач 1TB - 3,500 грн</option>
+                        <option value="monitor">Монітор 27" 4K - 12,000 грн</option>
+                    </optgroup>
+                    <optgroup label="Периферія">
+                        <option value="keyboard">Механічна клавіатура - 3,000 грн</option>
+                        <option value="mouse">Ігрова миша - 2,000 грн</option>
+                        <option value="webcam">Web-камера 4K - 4,000 грн</option>
+                        <option value="microphone">Студійний мікрофон - 5,500 грн</option>
+                    </optgroup>
+                    <optgroup label="Програмне забезпечення">
+                        <option value="windows">Windows 11 Pro - 5,000 грн</option>
+                        <option value="office">Microsoft Office 365 - 2,500 грн</option>
+                        <option value="adobe">Adobe Creative Cloud - 1,500 грн/міс</option>
+                    </optgroup>
+                </select>
+                <p class="info-text">Утримуйте Ctrl (Cmd на Mac) для вибору кількох товарів</p>
+            </div>
+            
+            <h3>💰 Спосіб оплати</h3>
+            
+            <div class="form-group">
+                <label>Оберіть вид оплати: <span class="required">*</span></label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" id="cash" name="payment" value="cash" required>
+                        💵 Готівковий розрахунок
+                    </label>
+                    <label>
+                        <input type="radio" id="cashless" name="payment" value="cashless">
+                        💳 Безготівковий розрахунок (банківський переказ)
+                    </label>
+                </div>
+            </div>
+            
+            <h3>📊 Додаткова інформація</h3>
+            
+            <div class="form-group">
+                <label>Яку додаткову інформацію ви бажаєте отримати:</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="balance" name="info" value="balance">
+                        📈 Дані про залишки на рахунку
+                    </label>
+                    <label>
+                        <input type="checkbox" id="payments" name="info" value="payments">
+                        📋 Список останніх виплат по рахунку
+                    </label>
+                    <label>
+                        <input type="checkbox" id="bonuses" name="info" value="bonuses">
+                        🎁 Інформація про бонуси та знижки
+                    </label>
+                    <label>
+                        <input type="checkbox" id="delivery" name="info" value="delivery">
+                        🚚 Статус доставки попередніх замовлень
+                    </label>
+                </div>
+            </div>
+            
+            <h3>💬 Коментарі</h3>
+            
+            <div class="form-group">
+                <label for="comments">Ваші коментарі до замовлення:</label>
+                <textarea id="comments" 
+                          name="comments" 
+                          rows="6" 
+                          placeholder="Введіть будь-які додаткові побажання щодо замовлення, спеціальні інструкції для доставки тощо..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="deliveryaddress">Адреса доставки:</label>
+                <textarea id="deliveryaddress" 
+                          name="deliveryaddress" 
+                          rows="3" 
+                          placeholder="Вкажіть адресу доставки товару"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="deliverydate">Бажана дата доставки:</label>
+                <input type="date" id="deliverydate" name="deliverydate">
+            </div>
+            
+            <div class="button-group">
+                <input type="submit" value="Оформити замовлення">
+                <input type="reset" value="Очистити форму">
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

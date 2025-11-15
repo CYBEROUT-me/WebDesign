@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7 - Завдання 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h3 {
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h3:first-of-type {
+            margin-top: 0;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .radio-group,
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 20px;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 12px 30px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        input[type="submit"] {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        input[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        input[type="reset"] {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        input[type="reset"]:hover {
+            background-color: #e0e0e0;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Завдання 3: Анкета для реєстрації користувача</h2>
+    
+    <form action="form_handler.htm" method="post" target="_blank">
+        
+        <h3>Особисті дані</h3>
+        
+        <div class="form-group">
+            <label for="lastname">Прізвище: <span class="required">*</span></label>
+            <input type="text" id="lastname" name="lastname" required maxlength="50">
+        </div>
+        
+        <div class="form-group">
+            <label for="firstname">Ім'я: <span class="required">*</span></label>
+            <input type="text" id="firstname" name="firstname" required maxlength="50">
+        </div>
+        
+        <div class="form-group">
+            <label for="middlename">По батькові:</label>
+            <input type="text" id="middlename" name="middlename" maxlength="50">
+        </div>
+        
+        <div class="form-group">
+            <label>Стать: <span class="required">*</span></label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Чоловіча</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Жіноча</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="birthdate">Дата народження: <span class="required">*</span></label>
+            <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+        
+        <h3>Контактна інформація</h3>
+        
+        <div class="form-group">
+            <label for="email">Email: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@mail.com">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Телефон: <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="+380XXXXXXXXX">
+        </div>
+        
+        <div class="form-group">
+            <label for="address">Адреса проживання:</label>
+            <textarea id="address" name="address" rows="3" placeholder="Введіть вашу адресу"></textarea>
+        </div>
+        
+        <h3>Освіта та професійна діяльність</h3>
+        
+        <div class="form-group">
+            <label for="education">Рівень освіти:</label>
+            <select id="education" name="education" size="1">
+                <option value="">Оберіть рівень освіти</option>
+                <option value="secondary">Середня</option>
+                <option value="vocational">Професійно-технічна</option>
+                <option value="bachelor">Бакалавр</option>
+                <option value="specialist">Спеціаліст</option>
+                <option value="master">Магістр</option>
+                <option value="phd">Доктор філософії (PhD)</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="university">Навчальний заклад:</label>
+            <input type="text" id="university" name="university" maxlength="100" placeholder="Назва університету">
+        </div>
+        
+        <div class="form-group">
+            <label for="speciality">Спеціальність:</label>
+            <input type="text" id="speciality" name="speciality" maxlength="100">
+        </div>
+        
+        <div class="form-group">
+            <label for="course">Курс навчання (для студентів):</label>
+            <input type="number" id="course" name="course" min="1" max="6" placeholder="1-6">
+        </div>
+        
+        <h3>Інтереси та навички</h3>
+        
+        <div class="form-group">
+            <label>Знання мов програмування:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="lang1" name="languages" value="python">
+                <label for="lang1">Python</label><br>
+                <input type="checkbox" id="lang2" name="languages" value="javascript">
+                <label for="lang2">JavaScript</label><br>
+                <input type="checkbox" id="lang3" name="languages" value="java">
+                <label for="lang3">Java</label><br>
+                <input type="checkbox" id="lang4" name="languages" value="cpp">
+                <label for="lang4">C++</label><br>
+                <input type="checkbox" id="lang5" name="languages" value="csharp">
+                <label for="lang5">C#</label><br>
+                <input type="checkbox" id="lang6" name="languages" value="php">
+                <label for="lang6">PHP</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="interests">Ваші інтереси та хобі:</label>
+            <textarea id="interests" name="interests" rows="4" placeholder="Розкажіть про ваші інтереси..."></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Готовність до роботи:</label>
+            <div class="radio-group">
+                <input type="radio" id="fulltime" name="worktype" value="fulltime">
+                <label for="fulltime">Повна зайнятість</label><br>
+                <input type="radio" id="parttime" name="worktype" value="parttime">
+                <label for="parttime">Часткова зайнятість</label><br>
+                <input type="radio" id="freelance" name="worktype" value="freelance">
+                <label for="freelance">Фріланс</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="aboutme">Додаткова інформація про себе:</label>
+            <textarea id="aboutme" name="aboutme" rows="5" placeholder="Розкажіть більше про себе..."></textarea>
+        </div>
+        
+        <div class="button-group">
+            <input type="submit" value="Відправити анкету">
+            <input type="reset" value="Очистити форму">
+        </div>
+        
+    </form>
+</body>
+</html>
