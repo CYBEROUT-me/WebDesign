@@ -1,0 +1,233 @@
+/* ============================================
+   Каскадні таблиці стилів для веб-сайту
+   Автор: Юхно О.О.
+   Лабораторна робота №11
+   ============================================ */
+
+/* Загальні стилі для body */
+body {
+    background-image: url('images/background.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Стилі для абзаців */
+p {
+    text-align: justify;           /* Вирівнювання по ширині */
+    text-indent: 40px;              /* Червоний рядок */
+    font-style: italic;             /* Курсив */
+    font-size: 16pt;                /* Розмір тексту */
+    line-height: 1.8;               /* Міжрядковий інтервал */
+    margin-left: 8%;                /* Відстань зліва */
+    margin-right: 8%;               /* Відстань справа */
+    color: #2c3e50;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Заголовок 1-го рівня */
+h1 {
+    font-weight: bold;              /* Жирний */
+    text-align: center;             /* По центру */
+    color: #2980b9;                 /* Синій колір */
+    font-style: normal;             /* Нормальний стиль */
+    font-size: 42pt;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Заголовок 2-го рівня */
+h2 {
+    font-weight: bold;
+    text-align: center;
+    color: #27ae60;
+    font-size: 32pt;
+    margin: 25px 8%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Заголовок 3-го рівня */
+h3 {
+    color: #8e44ad;
+    font-size: 24pt;
+    margin-left: 8%;
+    margin-right: 8%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-left: 5px solid #8e44ad;
+}
+
+/* Стилі для контейнера */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стилі для навігаційного меню */
+nav {
+    background-color: rgba(52, 73, 94, 0.95);
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Стилі для посилань - НЕ відвідане посилання */
+a:link {
+    color: #3498db;                 /* Синій колір */
+    text-decoration: none;          /* Без підкреслення */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Стилі для АКТИВНОГО посилання */
+a:active {
+    color: #e74c3c;                 /* Червоний колір */
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+/* Стилі для ВІДВІДАНОГО посилання */
+a:visited {
+    color: #9b59b6;                 /* Фіолетовий колір */
+    text-decoration: none;
+}
+
+/* Стилі для посилання при НАВЕДЕННІ курсора */
+a:hover {
+    color: #f39c12;                 /* Помаранчевий колір */
+    text-decoration: underline;     /* З підкресленням */
+    text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+}
+
+/* Стилі для посилань у навігації */
+nav a:link {
+    color: #ecf0f1;
+    font-size: 18pt;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav a:visited {
+    color: #bdc3c7;
+}
+
+nav a:hover {
+    color: #f39c12;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+nav a:active {
+    color: #e67e22;
+}
+
+/* Стилі для зображень */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Клас для центрування зображень */
+.center-image {
+    text-align: center;
+    margin: 30px 8%;
+}
+
+/* Клас для зображень зліва */
+.left-image {
+    float: left;
+    margin: 10px 20px 10px 8%;
+}
+
+/* Клас для зображень справа */
+.right-image {
+    float: right;
+    margin: 10px 8% 10px 20px;
+}
+
+/* Очищення float */
+.clear {
+    clear: both;
+}
+
+/* Стилі для footer */
+footer {
+    background-color: rgba(44, 62, 80, 0.95);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+footer p {
+    color: #ecf0f1;
+    font-style: normal;
+    margin: 10px;
+    background-color: transparent;
+}
+
+/* Блок з інформацією */
+.info-box {
+    background-color: rgba(236, 240, 241, 0.95);
+    border-left: 5px solid #3498db;
+    padding: 20px;
+    margin: 20px 8%;
+    border-radius: 5px;
+}
+
+.info-box p {
+    margin-left: 0;
+    margin-right: 0;
+    color: #34495e;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    p, h2, h3, .info-box, .center-image, .left-image, .right-image {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .left-image, .right-image {
+        float: none;
+        margin: 20px auto;
+        display: block;
+    }
+}
