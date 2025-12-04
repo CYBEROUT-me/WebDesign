@@ -1,0 +1,19 @@
+// Стилі для футера
+.footer {
+  background: $menu-bg;
+  color: #fff;
+  padding: $spacing-xl 0;
+  margin-top: $spacing-xl;
+  text-align: center;
+  
+  &__text {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__author {
+    font-size: $font-size-small;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+}

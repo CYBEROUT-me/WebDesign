@@ -1,0 +1,45 @@
+// Стилі для навігаційного меню
+.navigation {
+  margin-top: $spacing-md;
+}
+
+.menu {
+  @include reset-list;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+  
+  @include responsive(tablet) {
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+  
+  &__item {
+    // Стилі для пункту меню
+  }
+  
+  &__link {
+    display: block;
+    padding: $spacing-sm $spacing-lg;
+    color: #fff;
+    font-size: $font-size-large;
+    font-weight: 500;
+    border-radius: $border-radius-sm;
+    @include transition(all);
+    
+    &:hover {
+      background-color: $menu-hover;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+    
+    @include responsive(mobile) {
+      font-size: $font-size-base;
+      padding: $spacing-xs $spacing-md;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Стилі для шапки сайту
+.header {
+  background: $menu-bg;
+  color: #fff;
+  padding: $spacing-md 0;
+  @include box-shadow($shadow-md);
+  
+  &__title {
+    text-align: center;
+    font-size: $font-size-h1;
+    color: #fff;
+    margin-bottom: $spacing-md;
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+    @include responsive(tablet) {
+      font-size: $font-size-h2;
+    }
+    
+    @include responsive(mobile) {
+      font-size: $font-size-h3;
+    }
+  }
+}

@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+main {
+    padding: 50px 40px;
+}
+
+.student-list {
+    display: grid;
+    gap: 25px;
+}
+
+.student-card {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 6px solid;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.student-number {
+    font-size: 48px;
+    font-weight: 700;
+    margin-right: 30px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.student-info h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.student-role {
+    font-size: 16px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+footer {
+    background: #f8f9fa;
+    padding: 40px;
+    text-align: center;
+    color: #666;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.year {
+    font-weight: 600;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Унікальні стилі для кожного студента */
+
+/* Студент 1 - Фіолетовий градієнт */
+.student-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-left-color: #5568d3;
+}
+
+.student-1 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 2 - Синьо-зелений */
+.student-2 {
+    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    color: white;
+    border-left-color: #3ba890;
+}
+
+.student-2 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 3 - Помаранчевий градієнт */
+.student-3 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border-left-color: #e87d91;
+}
+
+.student-3 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 4 - Зелений градієнт */
+.student-4 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border-left-color: #3d96e3;
+}
+
+.student-4 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 5 - Рожевий градієнт */
+.student-5 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+    border-left-color: #f96287;
+}
+
+.student-5 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 6 - Темно-синій */
+.student-6 {
+    background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+    color: white;
+    border-left-color: #29b8ba;
+}
+
+.student-6 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 7 - Червоний градієнт */
+.student-7 {
+    background: linear-gradient(135deg, #f83600 0%, #f9d423 100%);
+    color: white;
+    border-left-color: #e13100;
+}
+
+.student-7 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 8 - Фіолетово-синій */
+.student-8 {
+    background: linear-gradient(135deg, #5f72bd 0%, #9b23ea 100%);
+    color: white;
+    border-left-color: #5366aa;
+}
+
+.student-8 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 9 - Бірюзовий */
+.student-9 {
+    background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%);
+    color: white;
+    border-left-color: #0a9156;
+}
+
+.student-9 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Студент 10 - Коричнево-золотий */
+.student-10 {
+    background: linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%);
+    color: white;
+    border-left-color: #ff5c6f;
+}
+
+.student-10 .student-number {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Додаткові стилі для більшої кількості студентів */
+.student-11 {
+    background: linear-gradient(135deg, #e52d27 0%, #b31217 100%);
+    color: white;
+    border-left-color: #d12923;
+}
+
+.student-12 {
+    background: linear-gradient(135deg, #603813 0%, #b29f94 100%);
+    color: white;
+    border-left-color: #543213;
+}
+
+.student-13 {
+    background: linear-gradient(135deg, #16a085 0%, #f4d03f 100%);
+    color: white;
+    border-left-color: #149077;
+}
+
+.student-14 {
+    background: linear-gradient(135deg, #3a1c71 0%, #d76d77 100%);
+    color: white;
+    border-left-color: #331964;
+}
+
+.student-15 {
+    background: linear-gradient(135deg, #1e9600 0%, #fff200 100%);
+    color: white;
+    border-left-color: #1b8600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    header {
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    .student-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .student-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .student-info h2 {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 30px 20px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+    }
+
+    .student-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}

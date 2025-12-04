@@ -1,0 +1,62 @@
+// Стилі для інформаційних карток
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+  padding: $spacing-xl 0;
+  
+  @include responsive(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include responsive(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-card {
+  padding: $spacing-lg;
+  border-radius: $border-radius-lg;
+  @include box-shadow($shadow-md);
+  @include transition(transform);
+  color: #fff;
+  
+  &:hover {
+    @include hover-lift;
+  }
+  
+  // Варіанти кольорів
+  &--blue {
+    @include gradient($card-blue, darken($card-blue, 15%));
+  }
+  
+  &--green {
+    @include gradient($card-green, darken($card-green, 15%));
+  }
+  
+  &--orange {
+    @include gradient($card-orange, darken($card-orange, 15%));
+  }
+  
+  &__title {
+    font-size: $font-size-h3;
+    margin-bottom: $spacing-md;
+    font-weight: 700;
+  }
+  
+  &__link {
+    color: #fff;
+    text-decoration: underline;
+    
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  &__text {
+    font-size: $font-size-base;
+    line-height: 1.7;
+    margin: 0;
+  }
+}

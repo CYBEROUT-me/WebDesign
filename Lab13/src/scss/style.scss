@@ -1,0 +1,14 @@
+// Імпорт змінних та міксінів
+@import 'variables';
+@import 'mixins';
+
+// Імпорт базових стилів
+@import 'reset';
+@import 'base';
+
+// Імпорт компонентів
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/info-card';
+@import 'components/movie-card';
+@import 'components/footer';

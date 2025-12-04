@@ -1,0 +1,73 @@
+// Базові стилі
+body {
+  font-family: $font-main;
+  font-size: $font-size-base;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+// Контейнер
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+// Заголовки
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  color: $text-color;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+// Параграфи
+p {
+  margin-bottom: $spacing-md;
+  line-height: 1.6;
+}
+
+// Посилання
+a {
+  color: $primary-color;
+  @include transition(color);
+  
+  &:hover {
+    color: darken($primary-color, 15%);
+  }
+}
+
+// Секції
+.section-title {
+  text-align: center;
+  font-size: $font-size-h2;
+  margin-bottom: $spacing-xl;
+  color: $text-color;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: $primary-color;
+    margin: $spacing-md auto 0;
+  }
+}
+
+// Main content
+.main {
+  min-height: calc(100vh - 300px);
+  padding: $spacing-xl 0;
+  background-color: $background-dark;
+}

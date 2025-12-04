@@ -1,0 +1,86 @@
+// Стилі для секції з мультфільмами
+.movies-section {
+  padding: $spacing-xl 0;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-lg;
+  
+  @include responsive(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include responsive(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Стилі для картки мультфільму
+.movie-card {
+  background: #fff;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  @include box-shadow($shadow-sm);
+  @include transition(all);
+  
+  &:hover {
+    @include hover-lift;
+  }
+  
+  &__image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    @include flex-center;
+    position: relative;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include transition(transform);
+    }
+    
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+  
+  &__content {
+    padding: $spacing-md;
+  }
+  
+  &__title {
+    font-size: $font-size-h3;
+    margin-bottom: $spacing-sm;
+    font-weight: 700;
+  }
+  
+  &__link {
+    color: $primary-color;
+    @include transition(color);
+    
+    &:hover {
+      color: $secondary-color;
+      text-decoration: underline;
+    }
+  }
+  
+  &__year {
+    color: $text-light;
+    font-size: $font-size-small;
+    font-weight: 600;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__description {
+    color: $text-light;
+    font-size: $font-size-base;
+    line-height: 1.6;
+    margin: 0;
+    @include line-clamp(3);
+  }
+}
